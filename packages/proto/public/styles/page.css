@@ -1,24 +1,42 @@
 body {
-	color: #3B5A2B;
-	background-color: #E8F7FD;
+	color: var(--color-body);
+	background-color: var(--color-body-background);
 	font-size: 20px;
 	font-family: Alegreya, Merriweather, Baskerville, Cambria, serif;
 }
 
 header {
-	background-color: #5B96BE;
-	color: #FFF3DB;
+	background-color: var(--color-main-heading-background);
+	color: var(--color-main-heading);
 	font-size: 36px;
 	font-family: Allura, Kanit, "Trebuchet MS", Calibri, Roboto, sans-serif;
+
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	justify-content: space-between;
+	padding: .5rem;
+	gap: 2rem;
+}
+
+img {
+	width: 100%;
+	max-height: auto;
 }
 
 a {
-	color: #FF7F32;
+	color: var(--color-accent);
 }
 
 h3 {
-	color: #5B96BE;
+	color: var(--color-smaller-heading);
 	font-weight: bold;
+	font-size: 1.5em;
+	padding-top: 1rem;
+}
+
+p {
+	padding-top: 1rem;
 }
 
 svg.icon {
@@ -29,5 +47,68 @@ svg.icon {
 	fill: currentColor;
 }
 
+.homepage {
+	display: grid;
+	grid-template-columns: [buffer] 20px [navbar] 4fr [img] 6fr [end];
+	grid-template-rows: [buffer] 20px [stuff] 1fr [end];
+	gap: 0 0rem;
+}
+
+.homepage-overlay {
+	background-color: var(--color-homepage-overlay);
+	grid-column: buffer / img;
+	grid-row: buffer / end;
+}
+
+.homepage-overlay-text {
+	grid-column: navbar;
+	grid-row: stuff / end;
+	margin-right: 20px;
+}
+
+.homepage-img {
+	grid-column: buffer / end;
+	grid-row: buffer / end;
+}
+
+.page {
+	display: grid;
+	grid-template-columns: [buffer] 20px [text] 2fr [img] 3fr [end];
+	grid-template-rows: 1fr;
+	gap: 0 0rem;
+}
+
+.page-overlay {
+	background-color: var(--color-page-overlay);
+	grid-column: buffer / img;
+	grid-row: 1;
+}
+
+.page-overlay-text {
+	grid-column: text;
+	grid-row: 1;
+	margin-right: 20px;
+}
+
+.page-img {
+	grid-column: buffer / end;
+	grid-row: 1;
+}
 
 
+.content {
+	display: grid;
+	grid-template-columns: [sidebar] 2fr [description] 7fr [buffer2] 10px [end];
+	gap: 0 2rem;
+	align-items: baseline;
+}
+
+.sidebar {
+	grid-column: sidebar;
+	margin: 1rem;
+}
+
+.description {
+	grid-column: description;
+	margin: 1rem;
+}
