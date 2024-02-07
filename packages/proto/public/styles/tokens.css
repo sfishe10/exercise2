@@ -1,0 +1,10 @@
+:root {
+	--color-main-heading: #FFF3DB;
+	--color-main-heading-background: #5B96BE;
+	--color-body: #663617;
+	--color-body-background: #E8F7FD;
+	--color-accent: #FF7F32;
+	--color-smaller-heading: #4877A9;
+	--color-homepage-overlay: rgba(255, 255, 255, .6);
+	--color-page-overlay: rgba(255, 255, 255, .75);
+}
