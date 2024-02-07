@@ -6,22 +6,25 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;700&family=Allura&display=swap" rel="stylesheet">
+		<script type="module" src="../drop-down.ts"></script>
+		<script type="module" src="../preset-buttons.ts"></script>
+		<script type="module" src="../user-panel.ts"></script>
+		<script type="module" src="../display-card.ts"></script>
 	</head>
 	<body>
-		<article>
-			<header>
-				<h1>San Luis Obispo</h1>
-				<p>Jewel of the Central Coast</p>
-			</header>
-			<section class="homepage">
-				<img class="homepage-img" src="images/slo.jpeg"/>
-				<div class="homepage-overlay"></div>
-				<nav class="homepage-overlay-text">
-					<h2><svg class="icon"><use href="/icons/attractions.svg#icon-restaurant"/></svg><a href="restaurants.html">Restaurants</a></h2>
-					<h2><svg class="icon"><use href="/icons/attractions.svg#icon-trail"/></svg><a href="trails.html">Hiking Trails</a></h2>
-					<h2><svg class="icon"><use href="/icons/attractions.svg#icon-beach"/></svg><a href="beaches.html">Nearby Beaches</a></h2>
-				</nav>
-			</section>
-		</article>
+		<header>
+			<h1>San Luis Obispo</h1>
+			<p>Jewel of the Central Coast</p>
+			<user-panel></user-panel>
+		</header>
+		<section class="homepage">
+			<img class="homepage-img" src="/images/slo.jpeg"/>
+			<div class="homepage-overlay"></div>
+			<nav class="homepage-overlay-text">
+				<h2><svg class="icon"><use href="/icons/attractions.svg#icon-restaurant"/></svg><a href="restaurants.html">Restaurants</a></h2>
+				<h2><svg class="icon"><use href="/icons/attractions.svg#icon-trail"/></svg><a href="trails.html">Hiking Trails</a></h2>
+				<h2><svg class="icon"><use href="/icons/attractions.svg#icon-beach"/></svg><a href="beaches.html">Nearby Beaches</a></h2>
+			</nav>
+		</section>
 	</body>
 </html>

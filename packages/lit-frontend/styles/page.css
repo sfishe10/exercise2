@@ -26,6 +26,7 @@ img {
 
 a {
 	color: var(--color-accent);
+	text-decoration: none;
 }
 
 h3 {
@@ -61,9 +62,14 @@ svg.icon {
 }
 
 .homepage-overlay-text {
+	line-height: 5rem;
 	grid-column: navbar;
 	grid-row: stuff / end;
 	margin-right: 20px;
+}
+
+.homepage-overlay-text svg {
+	vertical-align: middle;
 }
 
 .homepage-img {
@@ -96,19 +102,25 @@ svg.icon {
 }
 
 
-.content {
+/*.content {
 	display: grid;
-	grid-template-columns: [sidebar] 2fr [description] 7fr [buffer2] 10px [end];
+	grid-template-columns: 10px [description] 7fr [buffer2] 10px [end];
+	grid-template-rows: ;
 	gap: 0 2rem;
 	align-items: baseline;
-}
+}*/
 
-.sidebar {
-	grid-column: sidebar;
-	margin: 1rem;
+.attraction-cards {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 40px;
+	justify-content: space-between;
+	align-items: baseline;
+
 }
 
 .description {
-	grid-column: description;
-	margin: 1rem;
+	width: 1fr;
+	margin: 40px;
 }
+
