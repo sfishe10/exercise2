@@ -9,21 +9,21 @@ export class UserPanelElement extends LitElement {
   render() {
     return html`
       <drop-down>
-            Menu
-            <ul slot="menu">
-              <li><a href="profile.html">View Profile</a></li>
-              <li>
-                <preset-buttons
-                  name="font-size"
-                  .options=${[14, 16, 20, 24, 28]}
-                  value="20"
-                  @change=${this._selectFontSize}>
-                  Font Size
-                </preset-buttons>
-              </li>
-              <li>Sign Out</li>
-            </ul>
-          </drop-down>
+        Menu
+        <ul slot="menu">
+          <li><a href="profile.html">View Profile</a></li>
+          <li>
+            <preset-buttons
+              name="font-size"
+              .options=${[14, 16, 20, 24, 28]}
+              value="20"
+              @change=${this._selectFontSize}>
+              Font Size
+            </preset-buttons>
+          </li>
+          <li>Sign Out</li>
+        </ul>
+      </drop-down>
     `;
   }
 

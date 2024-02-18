@@ -21,14 +21,25 @@ var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__ge
   isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: true }) : target,
   mod
 ));
+var import_profiles = __toESM(require("./profiles"));
+var import_mongoConnect = require("./mongoConnect");
 var import_express = __toESM(require("express"));
 var import_cors = __toESM(require("cors"));
 const app = (0, import_express.default)();
 const port = process.env.PORT || 3e3;
 app.use((0, import_cors.default)());
 app.use(import_express.default.json());
+(0, import_mongoConnect.connect)("SLOApp");
 app.get("/hello", (req, res) => {
   res.send("Hello, World");
+});
+app.get("/api/profile/:userid", (req, res) => {
+  const { userid } = req.params;
+  import_profiles.default.get(userid).then((profile) => res.json(profile)).catch((err) => res.status(404).end());
+});
+app.post("/api/profiles", (req, res) => {
+  const newProfile = req.body;
+  import_profiles.default.create(newProfile).then((profile) => res.status(201).send(profile)).catch((err) => res.status(500).send(err));
 });
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
