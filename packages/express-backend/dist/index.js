@@ -33,13 +33,18 @@ app.use(import_express.default.json());
 app.get("/hello", (req, res) => {
   res.send("Hello, World");
 });
-app.get("/api/profile/:userid", (req, res) => {
+app.get("/api/profiles/:userid", (req, res) => {
   const { userid } = req.params;
   import_profiles.default.get(userid).then((profile) => res.json(profile)).catch((err) => res.status(404).end());
 });
 app.post("/api/profiles", (req, res) => {
   const newProfile = req.body;
   import_profiles.default.create(newProfile).then((profile) => res.status(201).send(profile)).catch((err) => res.status(500).send(err));
+});
+app.put("/api/profiles/:userid", (req, res) => {
+  const { userid } = req.params;
+  const newProfile = req.body;
+  import_profiles.default.update(userid, newProfile).then((profile) => res.json(profile)).catch((err) => res.status(404).end());
 });
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
