@@ -37,6 +37,8 @@ if (dist)
   app.use(import_express.default.static(dist.toString()));
 app.use((0, import_cors.default)());
 app.use(import_express.default.json());
+app.use("/api", router);
+app.use(import_express.default.static(dist));
 app.post("/login", import_auth.loginUser);
 app.post("/signup", import_auth.registerUser);
 (0, import_mongoConnect.connect)("SLOApp");

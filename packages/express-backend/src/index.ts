@@ -6,6 +6,9 @@ import cors from "cors";
 import * as path from "path";
 import fs from "node:fs/promises";
 import { loginUser, registerUser } from "./auth";
+import { uploadBlob, downloadBlob } from "./azure";
+import apiRouter from "./routes/api";
+import websockets from "./websockets";
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -19,6 +22,8 @@ if (dist) app.use(express.static(dist.toString()));
 
 app.use(cors());
 app.use(express.json());
+app.use("/api", router);
+app.use(express.static(dist));
 
 app.post("/login", loginUser);
 app.post("/signup", registerUser);
