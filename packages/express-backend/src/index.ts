@@ -1,5 +1,3 @@
-import profiles from "./profiles";
-import { Profile } from "./models/profile";
 import { connect } from "./mongoConnect";
 import express, { Request, Response } from "express";
 import cors from "cors";
@@ -22,7 +20,7 @@ if (dist) app.use(express.static(dist.toString()));
 
 app.use(cors());
 app.use(express.json());
-app.use("/api", router);
+app.use("/api", apiRouter);
 app.use(express.static(dist));
 
 app.post("/login", loginUser);

@@ -17,11 +17,15 @@ export class RestaurantPageElement extends App.View {
 					<p>	San Luis Obispo boasts a vibrant culinary scene with a diverse array of flavors and cuisines. From charming cafes lining the streets of downtown to upscale restaurants overlooking the Pacific Ocean, you'll find dining unlike anywhere else. Locally sourced ingredients infuse freshness into every dish, reflecting the region's agricultural abundance. Whether indulging in farm-to-table delicacies, savoring authentic Mexican street tacos, or exploring innovative fusion eateries, San Luis Obispo invites visitors and locals to celebrate creativity, quality, and community.</p>
 				</section>
 				<section class="attraction-cards">
-					<a href="./restaurants/scout"><display-card><span slot="label">Scout Coffee</span><span slot="detail">Breakfast</span></a>
-					
-					<a href="./restaurants/splash"><display-card><span slot="label">Splash Cafe</span><span slot="detail">Lunch</span></a>
-
-					<a href="./restaurants/firestone"><display-card><span slot="label">Firestone Grill</span><span slot="detail">Dinner</span></a>
+					<display-card imagePath="/images/scout.webp" linkPath="./restaurants/scout">
+						<span slot="label">Scout Coffee</span>
+					</display-card>
+					<display-card imagePath="/images/splash.jpeg" linkPath="./restaurants/splash">
+						<span slot="label">Splash Cafe</span>
+					</display-card>
+					<display-card imagePath="/images/firestone.webp" linkPath="./restaurants/firestone">
+						<span slot="label">Firestone Grill</span>
+					</display-card>
 				</section>
 			</section>
 		`

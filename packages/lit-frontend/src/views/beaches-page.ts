@@ -18,13 +18,16 @@ export class BeachesPageElement extends App.View {
 					<p>San Luis Obispo County is home to a variety of beautiful beaches along California's central coast. From the popular expanse of Pismo Beach to the rugged cliffs of Shell Beach, each offers its own unique appeal. Avila Beach provides a relaxed atmosphere with opportunities for water activities, while Morro Bay boasts a charming harbor overlooked by the iconic Morro Rock. Whether you're seeking sunbathing, water sports, or simply a scenic stroll, the beaches of SLO County offer diverse experiences for visitors and locals alike.</p>
 				</section>
 				<section class="attraction-cards">
-					<a href="./beaches/pismo"><display-card><span slot="label">Pismo Beach</span><span slot="detail">18 minutes</span></display-card></a>
-
-					<a href="./beaches/grover"><display-card><span slot="label">Grover Beach</span><span slot="detail">22 minutes</span></display-card></a>
-
-					<a href="./beaches/avila"><display-card><span slot="label">Avila Beach</span><span slot="detail">16 minutes</span></display-card></a>
+					<display-card imagePath="/images/pismo.jpeg" linkPath="./beaches/pismo">
+						<span slot="label">Pismo Beach</span>
+					</display-card>
+					<display-card imagePath="/images/grover.webp" linkPath="./beaches/grover">
+						<span slot="label">Grover Beach</span>
+					</display-card>
+					<display-card imagePath="/images/avila.jpeg" linkPath="./beaches/avila">
+						<span slot="label">Avila Beach</span>
+					</display-card>
 				</section>
-				
 			</section>
 		`
 	}

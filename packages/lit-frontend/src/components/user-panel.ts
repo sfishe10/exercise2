@@ -18,7 +18,7 @@ export class UserPanelElement extends LitElement {
           <preset-buttons
             name="font-size"
             .options=${[12, 14, 16, 20, 24]} 
-            value="20"
+            value="16"
             @change=${this._selectFontSize}>
             Font Size
           </preset-buttons>

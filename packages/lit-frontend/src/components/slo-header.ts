@@ -1,4 +1,4 @@
-import { html, LitElement, unsafeCSS } from "lit";
+import { css, html, LitElement, unsafeCSS } from "lit";
 import {
   customElement,
   property,
@@ -31,7 +31,7 @@ export class SLOHeaderElement extends LitElement {
 
     return html`
       <header>
-        <h1>San Luis Obispo</h1>
+        <a href="/app"><h1>San Luis Obispo</h1></a>
         <p>Jewel of the Central Coast</p>
         <p>
           Hello,
@@ -53,7 +53,15 @@ export class SLOHeaderElement extends LitElement {
 
   static styles = [
     unsafeCSS(resetCSS),
-    unsafeCSS(pageCSS) 
+    unsafeCSS(pageCSS),
+    css `
+      p {
+        font-size: 1em;
+      }
+      a {
+        color: var(--color-main-heading);
+      }
+    `
     
   ];
 
