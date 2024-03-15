@@ -23,7 +23,7 @@ export class SLOHeaderElement extends LitElement {
   user = new APIUser();
 
   render() {
-    const { name, userid } =
+    const { name } =
       this.profile || {};
     const shortname =
       (name && name.split(" ")[0]) ||
@@ -39,8 +39,8 @@ export class SLOHeaderElement extends LitElement {
             ${shortname}
             <user-panel
               slot="menu"
-              userid=${userid}>
-              <span slot="name">${this.profile?.name}</span>
+              userid=${this.user.username}>
+              <span slot="name">${name}</span>
               <button slot="logout" @click=${this._signOut}>
                 Log out...
               </button>

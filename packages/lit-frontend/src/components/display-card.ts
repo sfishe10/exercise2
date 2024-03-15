@@ -43,17 +43,19 @@ export class DisplayCardElement extends LitElement {
 		position: absolute;
 		width: 100%;
 		height: 100%;
-	    background-color: rgba(255, 255, 255, 0.5);
+	    background-color: rgba(255, 255, 255, 0.3);
 	    // grid-row: top / text;
 	}
 
 	.text {
 		z-index: 1;
 		background-color: var(--color-main-heading);
+		
 	}
 
 	h4 {
-		color: var(--color-main-heading-background);
+		// color: var(--color-main-heading-background);
+		color: var(--color-accent);
 		font-size: 1.5rem;
 		margin-left: 10px;
 		
